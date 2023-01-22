@@ -2,7 +2,7 @@
 
 # Parašykite funkcijas, kurios atlikas nurodytas užduotis:
 # 1. funkcija "get_user_average_age" - kaip argumentą priims masyvą ir duoto masyvo
-# atveju grąžins visų "users" amžiaus visurkį kaip skaičių.
+# atveju grąžins visų "users" amžiaus vidurkį kaip skaičių.
 # 2. funkcija "get_user_names" -  kaip argumentą priims masyvą ir duoto masyvo
 # atveju grąžins visų "users" vardus naujame list'e pvz., ['Alex John', 'Ann Smith'...].
 
@@ -19,3 +19,12 @@ users = [
   { "id": '8', "name": 'Simon Peterson', "age": 30 },
   { "id": '9', "name": 'Daniel Cane', "age": 51 },
 ]
+
+1.
+def get_user_average_age(users):
+  total_age = sum([user["age"] for user in users])
+  return total_age / len(users)
+
+2.
+def get_user_names(users):
+  return sorted([user["name"] for user in users])
